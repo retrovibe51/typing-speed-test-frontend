@@ -1,0 +1,58 @@
+<div>
+  <div class="game-container">
+    <br>
+
+    <mat-card class="word-stack">
+      <mat-card-subtitle>Word Stack</mat-card-subtitle>
+      <div class="word-stack-cards-container">
+        <mat-card class="word-stack-card" *ngFor="let stackWord of stackWords">{{ stackWord.title }}</mat-card>
+      </div>
+    </mat-card>
+
+    <br>
+
+    <div class="stat-cards-holder">
+      <mat-card class="stat-card">
+        <mat-card-title>{{ currentLevel }}</mat-card-title>
+        <mat-card-subtitle>LEVEL</mat-card-subtitle>
+      </mat-card>
+      <mat-card class="stat-card">
+        <mat-card-title>{{ score }}</mat-card-title>
+        <mat-card-subtitle>SCORE</mat-card-subtitle>
+      </mat-card>
+      <mat-card class="stat-card">
+        <mat-card-title>{{ scoreMultiplier }}X</mat-card-title>
+      </mat-card>
+    </div>
+
+    <br>
+
+    <mat-card class="form-container">
+      <form #wordForm="ngForm">
+        <mat-form-field appearance="fill">
+          <input matInput placeholder="Type your words here" ngModel name="typedWord"
+            (keypress)="displayKeyPress($event)" (keyup)="resetKey()" (keydown.enter)="onSubmitWord(wordForm)">
+        </mat-form-field>
+      </form>
+    </mat-card>
+
+    <div class="keyboard">
+      <ul>
+        <li *ngFor="let keyBtn of keysLine1">
+          <button mat-raised-button [attr.id]="'Key' + keyBtn">{{keyBtn}}</button>
+        </li>
+      </ul>
+      <ul>
+        <li *ngFor="let keyBtn of keysLine2">
+          <button mat-raised-button [attr.id]="'Key' + keyBtn">{{keyBtn}}</button>
+        </li>
+      </ul>
+      <ul>
+        <li *ngFor="let keyBtn of keysLine3">
+          <button mat-raised-button [attr.id]="'Key' + keyBtn">{{keyBtn}}</button>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</div>

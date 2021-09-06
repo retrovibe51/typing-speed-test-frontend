@@ -1,0 +1,69 @@
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.keyboard {
+  background-color: rgb(95, 94, 94);
+  padding: 10px;
+  border-radius: 4px;
+  /* width: 100%; */
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  justify-content: center;
+  padding: 0;
+}
+
+.key-pressed {
+  background-color: darkorange;
+}
+
+.word-stack {
+  /* display: flex;
+  flex-direction: row; */
+  width: 100%;
+  max-width: 630px;
+}
+
+.word-stack-cards-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.word-stack-card {
+  background-color: forestgreen;
+  width: fit-content
+}
+
+.form-container {
+  width:100%;
+  max-width: 630px;
+}
+
+.stat-cards-holder {
+  display: flex;
+  flex-direction: row;
+}
+
+.stat-card {
+  background-color: orange;
+  margin-right: 40px;
+  margin-left: 40px;
+  min-width: 40px;
+}
+
+.current-word {
+  background-color: orange;
+}
+
+mat-form-field {
+  width: 100%;
+}

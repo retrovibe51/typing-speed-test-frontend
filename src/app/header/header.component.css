@@ -1,0 +1,29 @@
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  color: antiquewhite;
+  text-decoration: underline;
+}
+
+.spacefill {
+  flex: 1 1 auto;
+}
+
+.mat-button:hover {
+  background: purple;
+  opacity: 0.8;
+}
+
+ul {
+  display: flex;
+}
